@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>My Skills</h2>
+
+<form method="POST" class="card">
+{% csrf_token %}
+
+<h3>Skills I can TEACH</h3>
+{% for skill in skills %}
+    <input type="checkbox" name="teach" value="{{skill.id}}"> {{skill.name}} <br>
+{% endfor %}
+
+<hr><br>
+
+<h3>Skills I want to LEARN</h3>
+{% for skill in skills %}
+    <input type="checkbox" name="learn" value="{{skill.id}}"> {{skill.name}} <br>
+{% endfor %}
+
+<br>
+<button class="btn">Save</button>
+
+</form>
+
+{% endblock %}

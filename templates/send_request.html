@@ -1,0 +1,10 @@
+<h2>Send Swap Request to {{receiver.username}}</h2>
+
+<form method="POST">
+{% csrf_token %}
+
+<input name="offered" placeholder="Skill you offer">
+<input name="requested" placeholder="Skill you want">
+
+<button>Send Request</button>
+</form>

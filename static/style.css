@@ -1,0 +1,48 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+
+body{
+    background:linear-gradient(120deg,#6366f1,#8b5cf6,#ec4899);
+    min-height:100vh;
+}
+
+/* NAVBAR */
+.navbar{
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(15px);
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    color:white;
+}
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    color:white;
+}
+
+/* CARD */
+.card{
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
+.btn{
+    background:#22c55e;
+    color:white;
+    padding:8px 15px;
+    border-radius:8px;
+    text-decoration:none;
+}

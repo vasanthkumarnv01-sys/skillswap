@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Received Requests</h2>
+
+{% for r in received %}
+<div class="card">
+    <b>{{r.sender}}</b> wants <b>{{r.skill_requested}}</b>
+    for <b>{{r.skill_offered}}</b> — {{r.status}}
+
+    {% if r.status == "Pending" %}
+        <br><br>
+        <a class="btn" href="/swap/accept/{{r.id}}/">Accept</a>
+        <a class="btn" href="/swap/reject/{{r.id}}/">Reject</a>
+    {% endif %}
+</div>
+{% endfor %}
+
+<hr><br>
+
+<h2>Sent Requests</h2>
+
+{% for r in sent %}
+<div class="card">
+    To {{r.receiver}} — {{r.status}}
+</div>
+{% endfor %}
+
+{% endblock %}

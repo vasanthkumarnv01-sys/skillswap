@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Welcome to SkillSwap 🎓</h1>
+<p>Exchange skills. Learn together. Grow faster.</p>
+
+{% if user.is_authenticated %}
+    <a class="btn" href="/browse/">Start Exploring</a>
+{% else %}
+    <a class="btn" href="/login/">Login</a>
+{% endif %}
+
+{% endblock %}

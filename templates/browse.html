@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Find People 🔍</h1>
+
+<form method="GET">
+    <input name="skill" placeholder="Search skill...">
+    <button class="btn">Search</button>
+</form>
+
+<br>
+
+{% for profile in users %}
+<div class="card">
+    <h3>{{profile.user.username}}</h3>
+
+    <b>Teaches:</b>
+    {% for skill in profile.skills_teach.all %}
+        {{skill.name}},
+    {% endfor %}
+    <br>
+
+    <b>Wants:</b>
+    {% for skill in profile.skills_learn.all %}
+        {{skill.name}},
+    {% endfor %}
+
+    <br><br>
+    <a class="btn" href="/swap/send/{{profile.user.id}}/">Send Swap Request</a>
+</div>
+{% endfor %}
+
+{% endblock %}
