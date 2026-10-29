@@ -1,35 +1,37 @@
 # SkillSwap — Student Skill Exchange Platform
 
-A full-stack web application concept for students to share skills, discover peers, and arrange skill-exchange sessions.
+SkillSwap is a Django web application for a student skill-exchange project. The repository is organized into separate apps for accounts, skills, and swaps.
 
 ## Tech Stack
-- **Backend:** Python, Django
-- **Frontend:** HTML, CSS, JavaScript
-- **Database:** SQLite (development)
+- Python
+- Django
+- HTML, CSS, and JavaScript templates
+- SQLite for local development
 
-## Core Features
-- User accounts and authentication
-- Skill listings and discovery
-- Skill-exchange requests and coordination
+## Project Areas
+- `accounts/` — account-related functionality
+- `skills/` — skill-related functionality
+- `swaps/` — skill-exchange functionality
+- `templates/` and `static/` — presentation assets
 
-## Getting Started
+## Run Locally
 1. Clone the repository:
    ```bash
    git clone https://github.com/vasanthkumarnv01-sys/skillswap.git
    cd skillswap
    ```
-2. Create and activate a virtual environment.
-3. Install dependencies listed in `requirements.txt`, if present.
-4. Run migrations and start the Django development server:
+2. Create and activate a Python virtual environment.
+3. Install dependencies:
+   ```bash
+   pip install -r requirement.txt
+   ```
+4. Apply migrations and start the server:
    ```bash
    python manage.py migrate
    python manage.py runserver
    ```
 
-> Note: Update this README to reflect the exact features and setup commands implemented in the current codebase before presenting it as a finished project.
-
 ## Author
 Vasanth Kumar
 
-## License
-Add a license if you intend to make the project reusable by others.
+> Review the project locally and add screenshots or confirmed feature details before using this README as a complete project demo.
